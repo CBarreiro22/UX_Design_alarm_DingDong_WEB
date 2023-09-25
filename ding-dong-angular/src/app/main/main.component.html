@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="header">
+    <div class="logo">
+      <img src="../../assets/images/logo.svg" alt="Logo de Mi Página" />
+    </div>
+    <h1 class="daa-h1-titulo">Ding Dong Alarm</h1>
+    <div class="dda-div-button-link">
+      <button class="dda-button-link">Salir</button>
+    </div>
+  </div>
+
+  <div class="body">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+      <mat-tab label="Administración">
+        <div class="body-container"><app-management></app-management></div>
+      </mat-tab>
+      <mat-tab label="Alarmas">
+        <div class="body-container">
+          <app-alarms></app-alarms>
+        </div>
+      </mat-tab>
+      <mat-tab label="Acciones"
+        ><div class="body-container">
+          <app-actions></app-actions></div
+      ></mat-tab>
+      <mat-tab label="Reportes"
+        ><div class="body-container">
+          <app-actions></app-actions></div
+      ></mat-tab>
+    </mat-tab-group>
+  </div>
+  <div class="footer">Derechos reservados</div>
+</div>

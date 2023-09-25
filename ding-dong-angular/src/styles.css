@@ -1,0 +1,254 @@
+/* #ffb300 */
+/* #ff6f00 */
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Amaranth-Regular";
+  src: url("./assets/fonts/Amaranth-Regular.ttf");
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Amaranth-Regular, Roboto, "Helvetica Neue", sans-serif;
+  background-color: rgba(230, 208, 89, 0.07);
+  background-image: url("./assets/images/fondo.png"); /* Ruta de la imagen de fondo */
+  background-repeat: repeat; /* Evitar que la imagen se repita */
+  background-attachment: fixed; /* Fijar la imagen de fondo */
+  background-position: center center; /* Posición de la imagen en el centro */
+}
+
+.main {
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 4px 4px rgba(63, 52, 190, 0.25);
+  background-color: #fff;
+}
+.main .header {
+  font-family: Amaranth-Regular, Roboto, "Helvetica Neue", sans-serif;
+  height: 150px;
+  box-shadow: 0px 0px 4px 4px rgba(63, 52, 190, 0.25);
+  background-color: #fff;
+
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  justify-content: space-between; /* Alinea los elementos al principio y al final del contenedor */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  /* color: #fff; Color de texto para el encabezado */
+  padding: 10px 20px; /* Espaciado interno */
+}
+.header h1 {
+  font-family: Amaranth-Regular, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: #3f34be;
+}
+
+.main .body {
+  font-family: Amaranth-Regular, Roboto, "Helvetica Neue", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.main .footer {
+  font-family: Amaranth-Regular, Roboto, "Helvetica Neue", sans-serif;
+  text-align: center;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
+.body-container {
+  padding: 20px;
+  border: 2px solid #d0cdf1;
+}
+.mdc-tab-indicator--active {
+  height: 60px !important;
+}
+
+.mdc-tab-indicator--active .mat-mdc-tab-ripple {
+  border-top-left-radius: 10px; /* Radio de esquina superior izquierda */
+  border-top-right-radius: 10px; /* Radio de esquina superior derecha */
+  border: 1px solid rgba(63, 52, 190, 0.25); /* Borde para la div */
+  padding: 20px; /* Espacio interno para el contenido de la div */
+  background-color: #bca31d;
+  height: 70px;
+}
+.mdc-tab__text-label {
+  font-family: Amaranth-Regular, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  color: #5f55d0 !important;
+}
+.mdc-tab-indicator--active .mdc-tab__text-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff !important;
+}
+.mat-mdc-tab-ripple {
+  border: 1px solid rgba(63, 52, 190, 0.25); /* Borde para la div */
+  background-color: #e6d059;
+}
+
+.mat-mdc-tab-labels {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: flex-end;
+}
+
+fieldset {
+  border: 1.5px solid #d0cdf1;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 16px;
+  color: #d0cdf1;
+  margin-left: 15px;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: 1px solid #d0cdf1;
+  box-shadow: 0px 0px 2px 1px rgba(63, 52, 190, 0.25);
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+input:hover {
+  border: 1px solid #d0cdf1; /* Cambia el borde cuando se pasa el cursor */
+  box-shadow: 0px 0px 2px 3px rgba(63, 52, 190, 0.5);
+}
+
+input:focus {
+  border: 1px solid #d0cdf1 !important;
+  /* background-color: #67880c!important; */
+  /* color: rgb(185, 1, 1)!important; */
+  box-shadow: 0 0 0 0.2rem rgba(63, 52, 190, 0.5) !important;
+}
+
+input::placeholder {
+  font-size: 14px;
+  color: #cccccc !important; /* Cambia el color del marcador de posición a gris claro (#999) */
+}
+
+.dda-button {
+  height: 35px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #bca31d !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #fff;
+  box-shadow: 0px 2px 2px 1px rgba(63, 52, 190, 0.25) !important;
+}
+
+.dda-button:hover {
+  height: 35px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #e6d059 !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0px 0px 2px 2px rgba(63, 52, 190, 0.5) !important;
+}
+
+.dda-button:active {
+  color: #3f34be;
+  height: 35px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #e6d059 !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-shadow: 0px 0px 2px 2px rgba(63, 52, 190, 0.5) !important;
+}
+
+table {
+  width: 100%;
+}
+table thead {
+  background-color: #5f55d0;
+  border: 1px solid #3f34be;
+  color: #fff;
+  height: 40px;
+  text-align: center;
+}
+table thead th {
+  border: 1px solid #3f34be;
+}
+table tbody tr {
+  height: 36px;
+  border-bottom: 1px solid rgba(63, 52, 190, 0.25);
+  color: #4d4d4d;
+  text-align: center;
+}
+
+table tbody tr i{
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  color: #000;
+}
+
+table tbody tr i:hover{
+  cursor: pointer;
+}
+
+.mat-mdc-text-field-wrapper {
+  height: 40px!important;
+
+}
+
+.mdc-text-field {
+  border-radius: 0px!important;
+  border: 1px solid #D0CDF1!important;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #fff!important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: rgb(234 0 0 / 87%);
+}
+
+.mat-mdc-form-field-type-mat-select{
+  width: 100%;
+}
+
+.daa-h1-titulo{
+  margin-right: auto!important;
+  margin-left: 30px!important;
+  margin-top: auto!important;
+  margin-bottom: auto!important;
+}
+
+.dda-div-button-link{
+  margin-top: auto;
+}
+
+.dda-button-link {
+  font-size: 16px;
+  border: 0px;
+  background-color:transparent; /* Change the background color on hover */
+  color:#3F34BE
+}
+
+
+.dda-button-link:hover {
+  background-color: transparent; /* Change the background color on hover */
+  text-decoration: underline;
+}

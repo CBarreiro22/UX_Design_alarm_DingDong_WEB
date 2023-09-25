@@ -1,0 +1,81 @@
+<fieldset>
+  <legend class="float-none w-auto">Nuevo grupo de alarma</legend>
+  <form>
+    <div class="row align-items-start">
+      <div class="form-group col">
+        <label for="exampleInputEmail1">Tipo:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          placeholder="Tipo de Alarma"
+        />
+      </div>
+      <div class="form-group col">
+        <label for="exampleInputPassword1">Descripción:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Descripción de Tipo de Alarma"
+        />
+      </div>
+    </div>
+
+    <div class="row align-items-end">
+      <div class="form-group col">
+        <label for="exampleInputPassword1">Descripción:</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Descripción de Tipo de Alarma"
+        />
+      </div>
+      <div class="col">
+        <button type="submit" class="dda-button">Añadir</button>
+      </div>
+    </div>
+  </form>
+</fieldset>
+<fieldset>
+  <legend class="float-none w-auto">Listados</legend>
+  <div class="row align-items-start">
+    <label for="exampleInputEmail1">Tipo Alarma:</label>
+    <div class="form-group col">
+      <mat-form-field>
+        <mat-select name="food">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <button type="submit" class="dda-button">Filtrar</button>
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th mat-sort-header="Tipo Alarma">Tipo Alarma</th>
+        <th mat-sort-header="Descripción">Descripción</th>
+        <th mat-sort-header="Visible en la app">Visible en la app</th>
+        <th mat-sort-header="Operación">Operación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dessert of sortedData">
+        <td>{{ dessert.name }}</td>
+        <td>{{ dessert.fat }}</td>
+        <td><mat-slide-toggle></mat-slide-toggle></td>
+
+        <td>
+          <i class="bi bi-pencil"></i>
+          <i class="bi bi-trash"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>
