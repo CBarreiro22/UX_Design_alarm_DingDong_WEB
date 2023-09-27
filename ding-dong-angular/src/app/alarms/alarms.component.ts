@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { Sort, MatSortModule } from '@angular/material/sort';
-interface Food {
+interface Grupos {
   value: string;
   viewValue: string;
 }
 
-export interface Dessert {
-  calories: number;
-  carbs: number;
-  fat: number;
-  name: string;
-  protein: number;
+export interface Alarmas {
+  tipo: string;
+  nombre: string;
+  acciones: string;
+  horaAlarma: string;
+  dias: string;
 }
 
 @Component({
@@ -20,26 +20,34 @@ export interface Dessert {
 })
 export class AlarmsComponent {
   selectedValue: string;
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' },
+  foods: Grupos[] = [
+    { value: '0', viewValue: 'Trabajo' },
+    { value: '1', viewValue: 'Casa' },
+    { value: '2', viewValue: 'Medicamentos' },
+    { value: '3', viewValue: 'Pasatiempos' },
   ];
-  desserts: Dessert[] = [
-    { name: 'Frozen yogurt', calories: 159, fat: 6, carbs: 24, protein: 4 },
-    {
-      name: 'Ice cream sandwich',
-      calories: 237,
-      fat: 9,
-      carbs: 37,
-      protein: 4,
-    },
-    { name: 'Eclair', calories: 262, fat: 16, carbs: 24, protein: 6 },
-    { name: 'Cupcake', calories: 305, fat: 4, carbs: 67, protein: 4 },
-    { name: 'Gingerbread', calories: 356, fat: 16, carbs: 49, protein: 4 },
+  desserts: Alarmas[] = [
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
+    { tipo: 'Casa', nombre: "159", acciones: "", horaAlarma:"",dias: "24"},
   ];
 
-  sortedData: Dessert[];
+  sortedData: Alarmas[];
   constructor() {
     this.sortedData = this.desserts.slice();
     this.selectedValue = 'steak-0';
@@ -54,16 +62,16 @@ export class AlarmsComponent {
     this.sortedData = data.sort((a, b) => {
       const isAsc = sort.direction === 'asc';
       switch (sort.active) {
-        case 'name':
-          return compare(a.name, b.name, isAsc);
-        case 'calories':
-          return compare(a.calories, b.calories, isAsc);
+        case 'tipo':
+          return compare(a.tipo, b.tipo, isAsc);
+        case 'nombre':
+          return compare(a.nombre, b.nombre, isAsc);
         case 'fat':
-          return compare(a.fat, b.fat, isAsc);
+          return compare(a.acciones, b.acciones, isAsc);
         case 'carbs':
-          return compare(a.carbs, b.carbs, isAsc);
+          return compare(a.horaAlarma, b.horaAlarma, isAsc);
         case 'protein':
-          return compare(a.protein, b.protein, isAsc);
+          return compare(a.dias, b.dias, isAsc);
         default:
           return 0;
       }

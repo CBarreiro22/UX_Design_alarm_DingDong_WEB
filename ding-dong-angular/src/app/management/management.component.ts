@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Sort, MatSortModule } from '@angular/material/sort';
 import { NgFor } from '@angular/common';
 
-interface Food {
+interface Grupos {
   value: string;
   viewValue: string;
 }
@@ -22,29 +22,30 @@ export interface Dessert {
 })
 export class ManagementComponent {
   selectedValue: string;
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' },
+  foods: Grupos[] = [
+    { value: '0', viewValue: 'Trabajo' },
+    { value: '1', viewValue: 'Casa' },
+    { value: '2', viewValue: 'Medicamentos' },
+    { value: '3', viewValue: 'Pasatiempos' },
   ];
   desserts: Dessert[] = [
-    { name: 'Frozen yogurt', calories: 159, fat: 6, carbs: 24, protein: 4 },
+    { name: 'Casa', calories: 159, fat: 6, carbs: 24, protein: 4 },
     {
-      name: 'Ice cream sandwich',
+      name: 'Casa',
       calories: 237,
       fat: 9,
       carbs: 37,
       protein: 4,
     },
-    { name: 'Eclair', calories: 262, fat: 16, carbs: 24, protein: 6 },
-    { name: 'Cupcake', calories: 305, fat: 4, carbs: 67, protein: 4 },
-    { name: 'Gingerbread', calories: 356, fat: 16, carbs: 49, protein: 4 },
+    { name: 'Medicamentos', calories: 262, fat: 16, carbs: 24, protein: 6 },
+    { name: 'Pasatiempos', calories: 305, fat: 4, carbs: 67, protein: 4 },
+    { name: 'Trabajo', calories: 356, fat: 16, carbs: 49, protein: 4 },
   ];
 
   sortedData: Dessert[];
   constructor() {
     this.sortedData = this.desserts.slice();
-    this.selectedValue = 'steak-0';
+    this.selectedValue = '';
   }
   sortData(sort: Sort) {
     const data = this.desserts.slice();

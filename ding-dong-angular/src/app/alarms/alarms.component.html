@@ -20,19 +20,19 @@
       <tr>
         <th mat-sort-header="Tipo Alarma">Tipo Alarma</th>
         <th mat-sort-header="Descripción">Nombre</th>
-        <th mat-sort-header="Descripción">Acciones</th>
-        <th mat-sort-header="Visible en la app">Hora Alarma</th>
-        <th mat-sort-header="Visible en la app">Días</th>
+        <th mat-sort-header="Acciones">Acciones</th>
+        <th mat-sort-header="Hora Alarma">Hora Alarma</th>
+        <th mat-sort-header="Días">Días</th>
         <th mat-sort-header="Operación">Operación</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let dessert of sortedData">
-        <td>{{ dessert.name }}</td>
-        <td>{{ dessert.calories }}</td>
-        <td>{{ dessert.fat }}</td>
-        <td></td>
-        <td></td>
+        <td>{{ dessert.tipo }}</td>
+        <td>{{ dessert.nombre }}</td>
+        <td>{{ dessert.acciones }}</td>
+        <td>{{ dessert.horaAlarma }}</td>
+        <td>{{ dessert.dias }}</td>
         <td>
           <i class="bi bi-pencil"></i>
           <i class="bi bi-trash"></i>
