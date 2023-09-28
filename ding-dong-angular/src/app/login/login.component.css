@@ -1,0 +1,15 @@
+.custom-img {
+    width: 400px;
+    height: 60px;
+}
+
+.custom-img-login{
+    width: 200px;
+    height: 200px;
+}
+
+.custom-h2 {
+    font-size: 40px;
+    color: #3F34BE;
+    font-weight: bold;
+}

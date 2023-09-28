@@ -17,10 +17,12 @@ import {
   MatSlideToggleModule,
   _MatSlideToggleRequiredValidatorModule,
 } from '@angular/material/slide-toggle';
+import { RouterModule } from '@angular/router';
+import {routes} from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent, MainComponent, ManagementComponent, LoginComponent, AlarmsComponent, ActionsComponent, ReportsComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MatTabsModule,MatSelectModule,MatPaginatorModule,MatSlideToggleModule],
+  imports: [BrowserModule, BrowserAnimationsModule, MatTabsModule,MatSelectModule,MatPaginatorModule,MatSlideToggleModule,RouterModule.forRoot(routes),],
   providers: [],
   bootstrap: [AppComponent],
 })
