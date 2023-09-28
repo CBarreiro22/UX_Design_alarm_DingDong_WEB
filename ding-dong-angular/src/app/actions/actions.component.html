@@ -1,1 +1,42 @@
-<p>actions works!</p>
+<fieldset>
+    <legend class="float-none w-auto">Nuevo acción</legend>
+    <form>  
+      <div class="row align-items-end">
+        <div class="form-group col">
+          <label for="exampleInputPassword1">Descripción de accion:<span class="text-danger">*</span></label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Descripción de Tipo de Alarma"
+          />
+        </div>
+        <div class="col">
+          <button type="submit" class="dda-button">Añadir</button>
+        </div>
+      </div>
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend class="float-none w-auto">Listado de acciones</legend>
+    <table>
+      <thead>
+        <tr>
+          <th mat-sort-header="Descripción">Descripción</th>
+          <th mat-sort-header="Visible en la app">Visible en la app</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let action of sortedData">
+          <td>{{ action.description }}</td>
+          <td><mat-slide-toggle></mat-slide-toggle></td>
+        </tr>
+      </tbody>
+    </table>
+    <mat-paginator
+      [length]="200"
+      [pageSizeOptions]="[10, 50, 100]"
+      aria-label="Select page"
+    >
+    </mat-paginator>
+  </fieldset>
