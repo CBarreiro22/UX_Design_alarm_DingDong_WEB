@@ -12,6 +12,6 @@ export class LoginComponent {
   continueWithGoogle() {
     // Aquí puedes agregar lógica relacionada con Google si es necesario
     // Luego, navega a MainComponent cuando se hace clic en el botón
-    this.router.navigate(['/app-main']);
+    this.router.navigate(['/DingDongAlarm']);
   }
 }

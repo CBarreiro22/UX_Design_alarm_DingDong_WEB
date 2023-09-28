@@ -5,10 +5,8 @@ import { LoginComponent } from './login/login.component'; // Asegúrate de impor
 
 export const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent }, // Ruta predeterminada
-  { path: 'app-main', component: MainComponent }, // Ruta para MainComponent
-   // Ruta para LoginComponent
-  // Otras rutas aquí
+  { path: 'login', component: LoginComponent }, 
+  { path: 'DingDongAlarm', component: MainComponent }, 
 ];
 
 @NgModule({
