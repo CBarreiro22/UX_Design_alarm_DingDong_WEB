@@ -155,6 +155,18 @@ input::placeholder {
   box-shadow: 0px 2px 2px 1px rgba(63, 52, 190, 0.25) !important;
 }
 
+.dda-button-file {
+  height: 35px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #fff !important;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #C2C2C2;
+  border: solid #D0CDF1;
+
+}
+
 .dda-button:hover {
   height: 35px;
   border: 0px;
